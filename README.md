@@ -50,10 +50,43 @@ In each case, the entry point into the CDS Hooks workflow is an in-progress pres
 is writing but hasn't yet completed. The goal is to intervene early, with the full context of the e-prescribing
 session so that advice can be tailored to the patient, the drug, and the dosage.
 
-The EHR begins by sending off a message to a 
+Rather than showing full FHIR Payloads here, I'll use a breezy protocol summary in plain English text. If you want 
+to see the full details of what goes back and forth over the wire, check out the [CDS Hooks Sandbox](http://sandbox.cds-hooks.org).
+
 
 ## 1. Sharing information about cost
 
+The Part D plan can return an "information card" that shows pricing details / estimates.
+
+```
+EHR:          Hey, Part D Plan! Dr. Mandel is writing a prescription for Sue Smith.
+              It's Toprol XL, 25mg daily. Any advice?
+
+Part D Plan:  Yes, please tell Dr. Mandel this is a Tier 3 drug.
+              Sue's co-pay is $30/month.
+```
+
 ## 2. Suggesting an alternative drug
+The Part D plan can return a "suggestion card" that shows alternatives.
+
+```
+EHR:          Hey, Part D Plan! Dr. Mandel is writing a prescription for Sue Smith.
+              It's Toprol XL, 25mg daily. Any advice?
+
+Part D Plan: Yes, please tell Dr. Mandel this is a Tier 3 drug.
+             Offer a suggestion to prescribe generic Metoprolol ER instead.
+             It's Tier 1, so Sue will save $27/month.
+```
+
 
 ## 3. Entering into a prior auth workflow
+For a drug that requires prior auth, the Part D Plan can return a SMART App Link to begin the process automatically.
+
+```
+EHR:          Hey, Part D Plan! Dr. Mandel is writing a prescription for Sue Smith.
+              It's Toprol XL, 25mg daily. Any advice?
+
+Part D Plan:  Yes, please tell Dr. Mandel this is a Tier 4 drug requiring prior auth.
+              Here's a deep link to our prior auth app, if he wants to get started
+              right away on the request.
+```
