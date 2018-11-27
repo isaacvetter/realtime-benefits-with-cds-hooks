@@ -7,7 +7,7 @@ introduces a functional requirement for e-prescribing software to surface real-t
 Under this proposal, Medicare Part D plans would expose data or offer a tool to ensure that clinicans could review coverage, cost, medication alternatives,
 and prior auth requirements at the point of care, while writing a prescription.
 
-I'd label this proposal as a "functional requirement" because it says something about what the systems needs to do, without
+I've called this proposal as a "functional requirement" because it says something about what the systems needs to do, without
 specifying the technical details (standards, protocols, etc) behind the required functionality. Proposing a functional requirement
 is a "safe" way to stimulate experimentation with multiple technical approaches -- safe because it avoids trying to over-specify
 the technical details, instead allowing market forces to drive innovation. A commonly cited risk is that
