@@ -73,9 +73,9 @@ The Part D plan can return a "suggestion card" that shows alternatives.
 EHR:          Hey, Part D Plan! Dr. Mandel is writing a prescription for Sue Smith.
               It's Toprol XL, 25mg daily. Any advice?
 
-Part D Plan: Yes, please tell Dr. Mandel this is a Tier 3 drug.
-             Offer a suggestion to prescribe generic Metoprolol ER instead.
-             It's Tier 1, so Sue will save $27/month.
+Part D Plan:  Yes, please tell Dr. Mandel this is a Tier 3 drug.
+              Offer a suggestion to prescribe generic Metoprolol ER instead.
+              It's Tier 1, so Sue will save $27/month.
 ```
 
 
