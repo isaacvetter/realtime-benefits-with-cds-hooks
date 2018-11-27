@@ -84,7 +84,7 @@ For a drug that requires prior auth, the Part D Plan can return a SMART App Link
 
 ```
 EHR:          Hey, Part D Plan! Dr. Mandel is writing a prescription for Sue Smith.
-              It's Toprol XL, 25mg daily. Any advice?
+              It's nitrofurantoin 100mg four times daily. Any advice?
 
 Part D Plan:  Yes, please tell Dr. Mandel this is a Tier 4 drug requiring prior auth.
               Here's a deep link to our prior auth app, if he wants to get started
